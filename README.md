@@ -1,2 +1,2 @@
 # Custom-Notification
-Bash script to to get custom notifications.
+Bash script to get custom notifications.
