@@ -1,0 +1,39 @@
+#!/bin/bash
+
+array=(
+	"Never Give Up!!" 
+	"Always Be Mentally Alert!"
+	"Posture check!"
+	"Do what you cant."
+	"Never settle."
+	"Be True!!"
+	"Always value other's opinion."
+	"Things you do defines you, not your thoughts."
+	"Question Everything."
+	"Always give your ABSOLUTE Best."
+	"Focus, Commitment, and Sheer Will."
+	"Earlier, Harder, and Longer."
+	"Always stay calm."
+	"Always listen to what people are saying."
+	"Defeat is always MOMENTARY."
+	"PERFECTION is a JOURNEY, not a DESTINATION."
+)
+RANGE=16
+index=$(($RANDOM%$RANGE))
+
+header="#!/bin/bash"
+command="osascript -e 'display notification \""
+text=${array[$index]}
+title="\" with title \"Notify\" "
+sound="sound name \"\"'"
+
+
+touch ~/WorkSpace/scripts/notify
+chmod u+x notify
+echo $header > notify
+echo -n $command >> notify
+echo -n $text >> notify
+echo -n $title >> notify
+echo -n $sound >> notify
+./notify
+#osascript -e 'display notification "message" with title "Title"'
